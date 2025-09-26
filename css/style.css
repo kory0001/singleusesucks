@@ -1,0 +1,205 @@
+img,
+body {
+  margin: 0;
+}
+
+/* * {
+  outline: 1px solid red;
+} */
+
+html,
+body {
+  cursor: none;
+}
+
+.custom-cursor {
+  width: 35px;
+  height: 35px;
+  background-color: #d7443e;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: left 0.05s ease, top 0.05s ease;
+}
+
+/************************************************ STYLES & COLORS ************************************************/
+
+.cream {
+  color: #fbf7dc;
+}
+
+.almost_black {
+  color: #2e2e2e;
+}
+
+.blue {
+  color: #355eb7;
+}
+
+.orange {
+  color: #ee9b15;
+}
+
+.red {
+  color: #d7443e;
+}
+
+h1 {
+  font-family: "Boldonse", sans-serif;
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-family: "Boldonse", sans-serif;
+  font-size: 4.5rem;
+  color: #2e2e2e;
+  line-height: 130%;
+}
+
+h3 {
+  font-family: "Boldonse", sans-serif;
+  font-size: 3.4rem;
+  line-height: 165%;
+  color: #2e2e2e;
+}
+
+p {
+  font-family: "Hedvig Letters Serif", serif;
+  font-size: 1.25rem;
+  max-width: 50ch;
+  line-height: 1.6;
+}
+
+/* main {
+  margin-left: 10%;
+  margin-right: 10%;
+} */
+
+/************************************************ NAVIGATION BAR ************************************************/
+
+.navigation__grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+}
+
+header {
+  background-color: #fbf7dc;
+  border-radius: 50px;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+.logo {
+  margin-left: 1%;
+}
+
+nav ul {
+  display: flex;
+  gap: 45px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  display: flex;
+  gap: 45px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+nav a {
+  font-family: "Boldonse", sans-serif;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #2e2e2e;
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav a:hover {
+  color: #355eb7;
+}
+
+.navigation__donate-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background-color: #ee9b15;
+  color: #fbf7dc;
+  border-radius: 50px;
+  padding: 0.5rem 2.5rem;
+  line-height: 1;
+  transition: all 0.3s ease;
+}
+
+.navigation__donate-button:hover {
+  background-color: #355eb7;
+  color: #fbf7dc;
+}
+/************************************************ HERO ************************************************/
+#hero {
+  background-color: #355eb7;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero__title {
+  color: #fbf7dc;
+  margin-top: -5%;
+}
+
+/************************************************ WHAT IS PLASTIC POLLUTION ************************************************/
+
+/* Section container */
+#what_is_plastic_pollution {
+  background-color: #2e2e2e;
+  height: 100vh; /* full viewport height */
+
+  /* Center the grid inside the section */
+  display: flex;
+  justify-content: center; /* horizontal centering */
+  align-items: center; /* vertical centering */
+}
+
+/* Grid inside the section */
+.what_is_plastic_pollution__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two columns of equal width */
+  gap: 5%; /* space between columns */
+  align-items: center; /* center items vertically inside each row */
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.what_is_plastic_pollution__title {
+  color: #fbf7dc;
+}
+
+.what_is_plastic_pollution__p {
+  color: #fbf7dc;
+}
+
+/************************************************ HOW BAD IS IT? ************************************************/
+#how_bad_is_it {
+  background-color: #fbf7dc;
+  height: 130vh;
+}
+
+#how_bad_is_it img {
+  height: 130px;
+  width: 130px;
+}
