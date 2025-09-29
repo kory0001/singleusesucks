@@ -32,6 +32,7 @@ body {
 
 .almost_black {
   color: #2e2e2e;
+  background-color: #2e2e2e;
 }
 
 .blue {
@@ -162,27 +163,50 @@ nav a:hover {
   margin-top: -5%;
 }
 
-/************************************************ WHAT IS PLASTIC POLLUTION ************************************************/
+/************************************************ GLOBAL GRID ************************************************/
 
-/* Section container */
-#what_is_plastic_pollution {
-  background-color: #2e2e2e;
-  height: 100vh; /* full viewport height */
-
-  /* Center the grid inside the section */
-  display: flex;
-  justify-content: center; /* horizontal centering */
-  align-items: center; /* vertical centering */
-}
-
-/* Grid inside the section */
-.what_is_plastic_pollution__grid {
+/* Shared 2-column grid */
+.two-col-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* two columns of equal width */
-  gap: 5%; /* space between columns */
-  align-items: center; /* center items vertically inside each row */
+  grid-template-columns: 1fr 1fr;
+  gap: 5%;
+  align-items: center;
   margin-left: 10%;
   margin-right: 10%;
+  height: 100vh; /* full viewport height */
+}
+
+.fact-2__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5%;
+  align-items: center;
+  height: 100vh;
+}
+
+.fact-2__wrapper {
+  background-color: #2e2e2e;
+}
+
+.fact-graphic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .fact-graphic img {
+  max-width: 100%;
+  height: auto;
+} */
+
+/************************************************ WHAT IS PLASTIC POLLUTION ************************************************/
+
+#what_is_plastic_pollution {
+  background-color: #2e2e2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .what_is_plastic_pollution__title {
@@ -194,12 +218,73 @@ nav a:hover {
 }
 
 /************************************************ HOW BAD IS IT? ************************************************/
+
 #how_bad_is_it {
   background-color: #fbf7dc;
-  height: 130vh;
 }
 
-#how_bad_is_it img {
-  height: 130px;
-  width: 130px;
+#how_bad_is_it h3 {
+  text-align: center;
+}
+
+#how_bad_is_it h2 {
+  margin-bottom: 2.5rem;
+}
+
+/* Fact-specific tweaks */
+.almost_black {
+  background: #2e2e2e;
+  color: #fbf7dc;
+}
+
+.one-min__container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 900px;
+  width: 100%;
+}
+
+.progress-wrapper {
+  flex: 1;
+  position: relative;
+  height: 100px;
+  background-color: #3a3a3a;
+  border-radius: 90px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  border-radius: 90px;
+  overflow: hidden;
+  transition: width 0.1s linear;
+}
+
+.progress-fill img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: left center;
+}
+
+.time-badge {
+  width: 100px;
+  height: 100px;
+  background-color: #355eb7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fbf7dc;
+  font-size: 1.25rem;
+  font-family: Boldonse;
+  flex-shrink: 0;
 }
