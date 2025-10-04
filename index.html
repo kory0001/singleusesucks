@@ -56,7 +56,7 @@
         </section>
         <!-- Section 1 -->
         <section id="what_is_plastic_pollution">
-            <div class="two-col-grid">
+            <div class="two-col__grid">
                 <div>
                     <h3 class="what_is_plastic_pollution__title">
                         Alright, here's <br> the thing <br> about plastic...
@@ -81,7 +81,7 @@
             </h3>
 
             <!-- Fact 1 -->
-            <div class="two-col-grid">
+            <div class="two-col__grid">
                 <div>
                     <h2>11 mil. <br> tons</h2>
                     <p>
@@ -106,7 +106,7 @@
 
             <!-- Fact 2 -->
             <div class="fact-2__wrapper">
-                <div class="two-col-grid almost_black">
+                <div class="two-col__grid almost_black">
                     <div class="fact-graphic">
                         <img src="assets/img/pie-chart.webp" alt="Plastic CO2 pie chart">
                     </div>
@@ -127,7 +127,7 @@
 
 
             <!-- Fact 3 -->
-            <div class="two-col-grid">
+            <div class="two-col__grid">
                 <div>
                     <h2>490 mil. <br> tons</h2>
                     <p>
@@ -139,15 +139,58 @@
                     </p>
                 </div>
                 <div class="fact-graphic">
-                    <img src="assets/fact3-bargraph.png" alt="Plastic production chart">
+                    <img src="assets/img/3xstats.webp" alt="Plastic production chart">
                 </div>
             </div>
         </section>
 
 
         <section id="how_can_i_help">
-            <h2>Okay, I see the problem.. How can I help?</h2>
-            <h3>Be the change, you want to see</h3>
+            <h2 class="how_can_i_help__title">Okay, I see the problem.. <br> How can I help?</h2>
+            <div class="recycle-game">
+                <div class="recycle-game__grid">
+                    <div class="bottles">
+                        <img src="assets/img/bottle1.webp" alt="bottle" draggable="true" class="bottle" id="bottle1">
+                        <img src="assets/img/bottle2.webp" alt="bottle" draggable="true" class="bottle" id="bottle2">
+                        <img src="assets/img/bottle3.webp" alt="bottle" draggable="true" class="bottle" id="bottle3">
+                    </div>
+
+                    <div class="arrow">
+                        <img src="assets/img/pil.png" alt="arrow">
+                    </div>
+
+                    <div class="bin" id="bin">
+                        <img src="assets/img/bin.png" alt="bin">
+                    </div>
+                </div>
+
+                <div class="thankyou hidden">
+                    <img src="assets/img/earth.webp" alt="earth" class="earth">
+                    <img src="assets/img/message.svg" alt="thank you message" class="thanks">
+                </div>
+            </div>
+
+            <link rel="stylesheet" href="recycle-game.css">
+            <script src="recycle-game.js" defer></script>
+
+            <script src="recycle-game.js"></script>
+
+            <div class="two-col__grid">
+                <div>
+                    <h3 class="how_can_i_help__subtitle">Be the change, you want to see</h3>
+                </div>
+                <div>
+                    <p class="how_can_i_help__text"> <span class="orange"> We know you want to help. But how?</span><br>
+                        We’ve collected our best tips that can be implemented in you everyday life. We all need to make
+                        a change, for this
+                        problem to be solved. And what better place to start than with ourselves? And please feel free
+                        to share these tips with
+                        your aunt who insits on getting that single use to go cup every time!</p>
+                </div>
+            </div>
+
+
+
         </section>
         <section id="donate">
             <h2>Ready to chip in for a change?</h2>

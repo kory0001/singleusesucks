@@ -3,9 +3,9 @@ body {
   margin: 0;
 }
 
-/* * {
+* {
   outline: 1px solid red;
-} */
+}
 
 html,
 body {
@@ -56,7 +56,7 @@ h2 {
   font-family: "Boldonse", sans-serif;
   font-size: 4.5rem;
   color: #2e2e2e;
-  line-height: 130%;
+  line-height: 160%;
 }
 
 h3 {
@@ -166,7 +166,7 @@ nav a:hover {
 /************************************************ GLOBAL GRID ************************************************/
 
 /* Shared 2-column grid */
-.two-col-grid {
+.two-col__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5%;
@@ -194,10 +194,10 @@ nav a:hover {
   align-items: center;
 }
 
-/* .fact-graphic img {
+.fact-graphic img {
   max-width: 100%;
   height: auto;
-} */
+}
 
 /************************************************ WHAT IS PLASTIC POLLUTION ************************************************/
 
@@ -287,4 +287,148 @@ nav a:hover {
   font-size: 1.25rem;
   font-family: Boldonse;
   flex-shrink: 0;
+}
+/************************************************ HOW CAN I HELP? ************************************************/
+#how_can_i_help {
+  background-color: #355eb7;
+}
+
+.how_can_i_help__title {
+  text-align: center;
+  color: #fbf7dc;
+  padding-top: 5%;
+}
+
+.recycle-game__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  position: relative;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.recycle-game {
+  padding: 40px;
+  position: relative;
+  min-height: 400px; /* ✅ ensures consistent height */
+}
+/* GRID LAYOUT */
+.recycle-game__grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
+/* BOTTLES */
+.recycle-game .bottles {
+  position: relative;
+  height: 300px;
+}
+
+.recycle-game .bottle {
+  position: absolute;
+  width: 100px;
+  cursor: grab;
+  transition: transform 0.2s;
+}
+
+.recycle-game .bottle:active {
+  cursor: grabbing;
+  transform: scale(1.05);
+}
+
+/* Bottle positions */
+.recycle-game #bottle1 {
+  top: 0;
+  left: 50px;
+  rotate: -30deg;
+}
+
+.recycle-game #bottle2 {
+  top: 120px;
+  left: 250px;
+  rotate: 10deg;
+}
+
+.recycle-game #bottle3 {
+  top: 220px;
+  left: 45px;
+  rotate: 45deg;
+}
+
+/* Arrow and bin */
+.recycle-game .arrow img {
+  width: 80px;
+}
+
+.recycle-game .bin img {
+  width: 150px;
+}
+
+/* THANK YOU SCREEN FIXED */
+.recycle-game .thankyou {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* space between earth and message */
+  opacity: 0;
+  transition: opacity 1.5s ease-in;
+  text-align: center;
+}
+
+/* fade-in effect */
+.recycle-game .thankyou.show {
+  opacity: 1;
+}
+
+/* keep hidden logic same */
+.recycle-game .hidden {
+  display: none;
+}
+
+.recycle-game .thanks {
+  order: -1; /* message above earth */
+  width: 200px;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease 0.5s forwards;
+}
+
+.recycle-game .earth {
+  width: 200px;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+/* Fade only (earth) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fade + slide (message) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.how_can_i_help__subtitle,
+.how_can_i_help__text {
+  color: #fbf7dc;
 }
