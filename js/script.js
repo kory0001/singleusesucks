@@ -83,3 +83,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+document.getElementById("donationForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // Clear input fields
+  document.getElementById("name").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("phone").value = "";
+
+  // Show confirmation
+  alert("Thank you for your donation!💙");
+});
