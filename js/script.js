@@ -95,3 +95,16 @@ document.getElementById("donationForm").addEventListener("submit", function (e) 
   // Show confirmation
   alert("Thank you for your donation!💙");
 });
+
+document.getElementById("newsletterForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // Get the input field
+  const emailInput = document.getElementById("newsletter-email");
+
+  // Show alert
+  alert("Thank you! You are now signed up💙");
+
+  // Clear the input field
+  emailInput.value = "";
+});
