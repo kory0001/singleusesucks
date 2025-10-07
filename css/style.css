@@ -325,16 +325,15 @@ nav a:hover {
 
 .recycle-game__grid {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  gap: 2rem;
+  gap: 5%;
   margin-left: 10%;
   margin-right: 10%;
   position: relative;
 }
 
 .recycle-game {
-  padding: 40px;
   position: relative;
   min-height: 400px;
 }
@@ -358,19 +357,19 @@ nav a:hover {
 
 /* Bottle positioning */
 .recycle-game #bottle1 {
-  top: 0;
-  left: 50px;
+  top: -75px;
+  left: 30px;
   rotate: -30deg;
 }
 
 .recycle-game #bottle2 {
-  top: 120px;
-  left: 250px;
+  top: 70px;
+  left: 280px;
   rotate: 10deg;
 }
 
 .recycle-game #bottle3 {
-  top: 220px;
+  top: 145px;
   left: 45px;
   rotate: 45deg;
 }
@@ -380,7 +379,37 @@ nav a:hover {
 }
 
 .recycle-game .bin img {
-  width: 150px;
+  width: 200px;
+  margin-top: 15%;
+}
+
+.recycle-game .bin.wiggle {
+  animation: wiggle 0.5s ease-in-out;
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(-5deg) scale(1.05);
+  }
+  30% {
+    transform: rotate(5deg) scale(1.05);
+  }
+  45% {
+    transform: rotate(-4deg) scale(1.03);
+  }
+  60% {
+    transform: rotate(4deg) scale(1.03);
+  }
+  75% {
+    transform: rotate(-2deg) scale(1.01);
+  }
+  90% {
+    transform: rotate(2deg) scale(1.01);
+  }
 }
 
 .recycle-game .thankyou {
@@ -439,6 +468,17 @@ nav a:hover {
   }
 }
 
+.be_the_change__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5%;
+  align-items: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
 /* HOW CAN I HELP SECTION */
 
 .how_can_i_help__subtitle,
@@ -447,7 +487,7 @@ nav a:hover {
 }
 
 #horizontal-scroll__cards {
-  padding: 40px 0;
+  padding-bottom: 10%;
   margin-left: 10%;
   overflow: hidden;
   box-sizing: border-box;
@@ -793,8 +833,26 @@ nav a:hover {
   background-color: var(--almost-black);
   height: 100vh;
   padding-top: 10%;
-  padding-left: 10%;
   padding-right: 10%;
+  padding-left: 10%;
+  position: relative; /* Add this */
+  overflow: hidden; /* Add this to prevent overflow */
+}
+
+.newsletter-bottle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 85%; /* Adjust size as needed */
+  width: auto;
+  z-index: 1;
+  pointer-events: none; /* Allow clicking through the image */
+}
+
+#newsletter-signup h3,
+#newsletter-signup form {
+  position: relative;
+  z-index: 2; /* Keep text and form above the image */
 }
 
 #newsletter-signup h3 {
@@ -922,7 +980,7 @@ footer {
 .footer-right h3 {
   font-family: var(--font-heading);
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: var(--cream);
 }
 
