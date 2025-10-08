@@ -123,3 +123,63 @@ document.getElementById("newsletterForm").addEventListener("submit", function (e
   // Clear the input field
   emailInput.value = "";
 });
+
+// Intersection Observer to animate only when visible
+const doodleObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const doodle = entry.target;
+
+      if (entry.isIntersecting && !doodle.dataset.animating) {
+        // Start animation
+        doodle.dataset.animating = "true";
+        const images = doodle.dataset.images.split(",");
+        let currentIndex = Math.floor(Math.random() * images.length);
+
+        // Set initial image
+        doodle.style.backgroundImage = `url(${images[currentIndex]})`;
+
+        // Animate
+        const intervalId = setInterval(() => {
+          currentIndex = (currentIndex + 1) % images.length;
+          doodle.style.backgroundImage = `url(${images[currentIndex]})`;
+        }, 200);
+
+        doodle.dataset.intervalId = intervalId;
+      } else if (!entry.isIntersecting && doodle.dataset.animating) {
+        // Stop animation when off-screen
+        clearInterval(doodle.dataset.intervalId);
+        doodle.dataset.animating = "";
+      }
+    });
+  },
+  {
+    threshold: 0.1,
+    rootMargin: "50px", // Start animating slightly before entering viewport
+  }
+);
+
+// Observe all doodles
+document.querySelectorAll(".doodle-animation").forEach((doodle) => {
+  doodleObserver.observe(doodle);
+});
+
+// Optional: Preload all images for smoother animation
+const preloadDoodleImages = () => {
+  const allImages = new Set();
+  document.querySelectorAll(".doodle-animation").forEach((doodle) => {
+    doodle.dataset.images.split(",").forEach((src) => allImages.add(src));
+  });
+
+  allImages.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+};
+
+// Preload after page loads
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", preloadDoodleImages);
+} else {
+  preloadDoodleImages();
+}

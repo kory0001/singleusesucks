@@ -242,19 +242,28 @@ nav a:hover {
 
 /************************************************ HOW BAD IS IT? ************************************************/
 
-#how_bad_is_it {
+#how_bad_is_it_intro {
   background-color: var(--cream);
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#how_bad_is_it h3 {
-  padding-top: 10%;
+#how_bad_is_it_intro h3 {
   text-align: center;
 }
 
-#how_bad_is_it h3 img {
+#how_bad_is_it_intro h3 img {
   vertical-align: middle;
   display: inline-block;
   margin: 0 10px;
+}
+
+#how_bad_is_it {
+  background-color: var(--cream);
+  position: relative;
 }
 
 #how_bad_is_it h2 {
@@ -1047,4 +1056,53 @@ footer {
   font-family: var(--font-body);
   font-size: 1.25rem;
   line-height: 1.6;
+}
+
+/* FRAME ANIMATIONS */
+
+/* GENERAL */
+.doodle-animation {
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* Animation 1 - Squiggle around bottle */
+.squiggle-doodle {
+  width: 500px;
+  height: 400px;
+  top: 78%;
+  right: 14.5%;
+  z-index: 10;
+}
+
+/* Animation 2 - Burning earth */
+.burning-doodle {
+  top: 28%;
+  left: 38.5%;
+  width: 180px;
+  height: 180px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Animation 3 - Arrows, 1 min. timer */
+.arrows-doodle {
+  width: 800px;
+  height: 600px;
+  z-index: 10;
+  pointer-events: none;
+  top: 5%;
+  left: 42%;
+}
+
+/* Animation 4 - 10-13% stats */
+.arrows-exlamation-doodle {
+  width: 600px;
+  height: 600px;
+  z-index: 10;
+  pointer-events: none;
+  top: 38%;
+  left: 8%;
 }
