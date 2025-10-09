@@ -9,10 +9,10 @@ body {
   box-sizing: border-box;
 }
 
-/* * {
+* {
   outline: 1px solid red;
 }
-*, */
+*,
 
 /************************************************ STYLES & COLORS ************************************************/
 
@@ -98,7 +98,7 @@ p {
   transform: scale(1.1);
   z-index: 1; /* Background layer */
   margin-left: -5%;
-  pointer-events: none; /* Allows clicking through to links */
+  pointer-events: none;
 }
 
 .header__wrapper {
@@ -173,7 +173,7 @@ nav a:hover {
 /************************************************ HERO SECTION ************************************************/
 #hero {
   background-color: var(--blue);
-  height: 85vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1095,9 +1095,8 @@ footer {
 .squiggle-doodle {
   width: 500px;
   height: 400px;
-  top: 76%;
-  right: 12%;
-  transform: rotate(-6deg);
+  top: 78%;
+  right: 13.7%;
 }
 
 /* Animation 2 - Burning earth */
@@ -1135,7 +1134,7 @@ footer {
 /* Animation 6 - arrow RIGHT */
 .arrow-right-doodle {
   transform: rotate(90deg);
-  left: 42%;
+  left: 45%;
   top: 10%;
   width: 200px;
   height: 350px;
@@ -1145,7 +1144,7 @@ footer {
 .fish-eye-doodle {
   width: 50px;
   height: 50px;
-  top: 19%;
+  top: 18%;
   left: 61%;
 }
 

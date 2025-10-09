@@ -17,6 +17,55 @@ const getElement = (selector) => document.querySelector(selector);
 const getElements = (selector) => document.querySelectorAll(selector);
 
 // ============================================
+// SCROLLING BEHAVIOR SECTIONS
+// ============================================
+
+// const sections = document.querySelectorAll(".scroll-section");
+// let isScrolling = false;
+
+// function getNextSection(current, direction) {
+//   const currentIndex = [...sections].indexOf(current);
+//   const nextIndex = direction === "down" ? currentIndex + 1 : currentIndex - 1;
+//   if (nextIndex < 0 || nextIndex >= sections.length) return null;
+//   return sections[nextIndex];
+// }
+
+// function handleScroll(direction) {
+//   if (isScrolling) return;
+
+//   const scrollPos = window.scrollY + window.innerHeight / 2;
+//   let current = sections[0];
+//   for (const sec of sections) {
+//     if (scrollPos >= sec.offsetTop) current = sec;
+//   }
+
+//   const next = getNextSection(current, direction);
+//   if (!next) return;
+
+//   isScrolling = true;
+//   next.scrollIntoView({ behavior: "smooth" });
+
+//   // tillad ny scroll efter lidt tid
+//   setTimeout(() => {
+//     isScrolling = false;
+//   }, 900);
+// }
+
+// let lastTouchY = 0;
+
+// window.addEventListener("wheel", (e) => {
+//   if (Math.abs(e.deltaY) < 20) return;
+//   handleScroll(e.deltaY > 0 ? "down" : "up");
+// });
+
+// window.addEventListener("touchstart", (e) => (lastTouchY = e.touches[0].clientY));
+// window.addEventListener("touchend", (e) => {
+//   const deltaY = lastTouchY - e.changedTouches[0].clientY;
+//   if (Math.abs(deltaY) < 50) return;
+//   handleScroll(deltaY > 0 ? "down" : "up");
+// });
+
+// ============================================
 // PROGRESS BAR ANIMATION (1-minute timer)
 // ============================================
 
