@@ -245,21 +245,13 @@ nav a:hover {
 
 /************************************************ HOW BAD IS IT? ************************************************/
 
-#how_bad_is_it_intro {
-  background-color: var(--cream);
-  position: relative;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-#how_bad_is_it_intro h3 {
+#how_bad_is_it h3 {
   text-align: center;
+  padding-top: 10%;
+  margin-bottom: -5%;
 }
 
-#how_bad_is_it_intro h3 img {
+#how_bad_is_it h3 img {
   vertical-align: middle;
   display: inline-block;
   margin: 0 10px;
@@ -286,7 +278,7 @@ nav a:hover {
   flex: 1;
   position: relative;
   height: 100px;
-  background-color: #3a3a3a;
+  background-color: var(--almost-black);
   border-radius: 90px;
   overflow: hidden;
 }
@@ -1102,7 +1094,7 @@ footer {
 
 /* Animation 2 - Burning earth */
 .burning-doodle {
-  top: 28%;
+  top: 1%;
   left: 38.5%;
   width: 180px;
   height: 180px;
@@ -1112,7 +1104,7 @@ footer {
 .arrows-doodle {
   width: 800px;
   height: 600px;
-  top: 5%;
+  top: 12%;
   left: 42%;
 }
 
@@ -1120,14 +1112,14 @@ footer {
 .arrows-exlamation-doodle {
   width: 600px;
   height: 600px;
-  top: 38%;
+  top: 42%;
   left: 8%;
 }
 
 /* Animation 5 - arrow UP */
 .arrow-up-doodle {
   left: 80%;
-  top: 75%;
+  top: 77%;
   width: 200px;
   height: 500px;
 }
