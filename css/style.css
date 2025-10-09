@@ -101,9 +101,21 @@ p {
   pointer-events: none; /* Allows clicking through to links */
 }
 
-header {
-  background-color: var(--blue);
-  padding-top: 2%;
+.header__wrapper {
+  position: fixed; /* fix to viewport */
+  top: -120px; /* hide initially */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  margin: 0 auto;
+  z-index: 1000; /* above hero background */
+  transition: top 0.3s ease;
+  background-color: var(--cream);
+  border-radius: 50px;
+}
+
+.header__wrapper.visible {
+  top: 2%; /* same as original padding */
 }
 
 .navigation__grid {
@@ -111,15 +123,6 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem 1rem;
-}
-
-.header__wrapper {
-  background-color: var(--cream);
-  border-radius: 50px;
-  width: 95%;
-  margin: 0 auto;
-  z-index: 2; /* Above background */
-  position: relative; /* Add this */
 }
 
 .logo {
@@ -519,6 +522,28 @@ nav a:hover {
   object-fit: cover;
 }
 
+.arrow-animation {
+  animation: friendlyWave 2s ease-in-out infinite;
+}
+
+@keyframes friendlyWave {
+  0% {
+    transform: translateX(0);
+  }
+  15% {
+    transform: translateX(8px);
+  }
+  30% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(8px);
+  }
+  60%,
+  100% {
+    transform: translateX(0);
+  }
+}
 .cards_container {
   height: 25rem;
   display: flex;
@@ -1047,13 +1072,6 @@ footer {
   stroke: var(--cream);
 }
 
-/* Responsive */
-@media (max-width: 968px) {
-  .footer-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-}
 .contact-item span,
 .footer-right p,
 .footer-left p {
@@ -1062,7 +1080,7 @@ footer {
   line-height: 1.6;
 }
 
-/* FRAME ANIMATIONS */
+/************************************************ DOODLE ANIMATIONS ************************************************/
 
 /* GENERAL */
 .doodle-animation {
@@ -1077,8 +1095,9 @@ footer {
 .squiggle-doodle {
   width: 500px;
   height: 400px;
-  top: 78%;
-  right: 14.5%;
+  top: 76%;
+  right: 12%;
+  transform: rotate(-6deg);
 }
 
 /* Animation 2 - Burning earth */
