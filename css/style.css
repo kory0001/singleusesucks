@@ -249,6 +249,7 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 #how_bad_is_it_intro h3 {
@@ -560,6 +561,7 @@ nav a:hover {
 /************************************************ DONATE SECTION ************************************************/
 #donate {
   background-color: var(--cream);
+  position: relative;
 }
 
 .chip-in__title {
@@ -733,6 +735,10 @@ nav a:hover {
 
 /* WHERE DOES IT GO - SECTION */
 
+#where-does-it-go {
+  position: relative;
+}
+
 #where-does-it-go h3 {
   margin-bottom: 2.5rem;
 }
@@ -793,7 +799,9 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative; /* Add this */
 }
+
 .pill-buttons-left {
   flex: 1;
   display: flex;
@@ -802,6 +810,7 @@ nav a:hover {
   column-gap: 10px;
   align-items: center;
   justify-content: flex-start;
+  padding-right: 200px; /* Make space for the arrow */
 }
 
 .pill-button {
@@ -813,11 +822,6 @@ nav a:hover {
   font-family: var(--font-heading);
   text-align: center;
   width: fit-content;
-}
-
-.pill-buttons-right img {
-  max-width: 150px;
-  height: auto;
 }
 
 /* rotation of pills */
@@ -1066,6 +1070,7 @@ footer {
   background-repeat: no-repeat;
   position: absolute;
   pointer-events: none;
+  z-index: 10;
 }
 
 /* Animation 1 - Squiggle around bottle */
@@ -1074,7 +1079,6 @@ footer {
   height: 400px;
   top: 78%;
   right: 14.5%;
-  z-index: 10;
 }
 
 /* Animation 2 - Burning earth */
@@ -1083,16 +1087,12 @@ footer {
   left: 38.5%;
   width: 180px;
   height: 180px;
-  z-index: 10;
-  pointer-events: none;
 }
 
 /* Animation 3 - Arrows, 1 min. timer */
 .arrows-doodle {
   width: 800px;
   height: 600px;
-  z-index: 10;
-  pointer-events: none;
   top: 5%;
   left: 42%;
 }
@@ -1101,8 +1101,50 @@ footer {
 .arrows-exlamation-doodle {
   width: 600px;
   height: 600px;
-  z-index: 10;
-  pointer-events: none;
   top: 38%;
   left: 8%;
+}
+
+/* Animation 5 - arrow UP */
+.arrow-up-doodle {
+  left: 80%;
+  top: 75%;
+  width: 200px;
+  height: 500px;
+}
+
+/* Animation 6 - arrow RIGHT */
+.arrow-right-doodle {
+  transform: rotate(90deg);
+  left: 42%;
+  top: 10%;
+  width: 200px;
+  height: 350px;
+}
+
+/* Animation 7 - fish eye */
+.fish-eye-doodle {
+  width: 50px;
+  height: 50px;
+  top: 19%;
+  left: 61%;
+}
+
+/* Animation 8 - arrow SWIRL UP */
+.arrow-swirl-up-doodle {
+  left: 80%;
+  top: 2%;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 500px;
+}
+
+/* Animation 9 - scribble */
+
+.scribble-doodle {
+  width: 520px;
+  height: 520px;
+  top: 3%;
+  left: -2%;
+  transform: rotate(10deg);
 }
