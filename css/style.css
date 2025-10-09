@@ -9,10 +9,10 @@ body {
   box-sizing: border-box;
 }
 
-* {
+/* * {
   outline: 1px solid red;
 }
-*,
+*, */
 
 /************************************************ STYLES & COLORS ************************************************/
 
@@ -82,40 +82,21 @@ p {
 
 /************************************************ NAVIGATION BAR ************************************************/
 
-.hero-section__wrapper {
-  position: relative;
-  overflow: hidden;
-}
-
-.shared-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 110%; /* Slightly larger to allow cropping */
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  transform: scale(1.1);
-  z-index: 1; /* Background layer */
-  margin-left: -5%;
-  pointer-events: none;
-}
-
 .header__wrapper {
-  position: fixed; /* fix to viewport */
-  top: -120px; /* hide initially */
+  position: fixed;
+  top: -120px;
   left: 50%;
   transform: translateX(-50%);
   width: 95%;
   margin: 0 auto;
-  z-index: 1000; /* above hero background */
+  z-index: 1000;
   transition: top 0.3s ease;
   background-color: var(--cream);
   border-radius: 50px;
 }
 
 .header__wrapper.visible {
-  top: 2%; /* same as original padding */
+  top: 2%;
 }
 
 .navigation__grid {
@@ -171,6 +152,25 @@ nav a:hover {
   color: var(--cream);
 }
 /************************************************ HERO SECTION ************************************************/
+.hero-section__wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.shared-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.1);
+  z-index: 1;
+  margin-left: -5%;
+  pointer-events: none;
+}
+
 #hero {
   background-color: var(--blue);
   height: 100vh;
@@ -232,14 +232,14 @@ nav a:hover {
 }
 
 .what_is_plastic_pollution__title {
-  position: relative; /* Add this */
-  z-index: 2; /* Above background */
+  position: relative;
+  z-index: 2;
   color: var(--cream);
 }
 
 .what_is_plastic_pollution__p {
-  position: relative; /* Add this */
-  z-index: 2; /* Above background */
+  position: relative;
+  z-index: 2;
   color: var(--cream);
 }
 
@@ -325,6 +325,7 @@ nav a:hover {
   font-family: Boldonse;
   flex-shrink: 0;
 }
+
 /************************************************ HOW CAN I HELP? ************************************************/
 #how_can_i_help {
   background-color: var(--blue);
@@ -368,7 +369,7 @@ nav a:hover {
   transform: scale(1.05);
 }
 
-/* Bottle positioning */
+/* BOTTLE POSITIONING */
 .recycle-game #bottle1 {
   top: -75px;
   left: 30px;
@@ -824,7 +825,7 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative; /* Add this */
+  position: relative;
 }
 
 .pill-buttons-left {
@@ -835,7 +836,7 @@ nav a:hover {
   column-gap: 10px;
   align-items: center;
   justify-content: flex-start;
-  padding-right: 200px; /* Make space for the arrow */
+  padding-right: 200px;
 }
 
 .pill-button {
@@ -849,7 +850,7 @@ nav a:hover {
   width: fit-content;
 }
 
-/* rotation of pills */
+/* PILL POSITIONING */
 .pill-button:nth-child(1) {
   transform: rotate(-4deg);
 }
@@ -873,24 +874,24 @@ nav a:hover {
   padding-top: 10%;
   padding-right: 10%;
   padding-left: 10%;
-  position: relative; /* Add this */
-  overflow: hidden; /* Add this to prevent overflow */
+  position: relative;
+  overflow: hidden;
 }
 
 .newsletter-bottle {
   position: absolute;
   top: 0;
   left: 0;
-  height: 85%; /* Adjust size as needed */
+  height: 85%;
   width: auto;
   z-index: 1;
-  pointer-events: none; /* Allow clicking through the image */
+  pointer-events: none;
 }
 
 #newsletter-signup h3,
 #newsletter-signup form {
   position: relative;
-  z-index: 2; /* Keep text and form above the image */
+  z-index: 2;
 }
 
 #newsletter-signup h3 {
@@ -993,12 +994,12 @@ footer {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr;
-  column-gap: 80px; /* Space from logo to "Say hello!" */
+  column-gap: 80px;
   align-items: start;
 }
 
 .footer-right {
-  margin-left: -80px; /* Negative margin to pull "Can't get enough?" closer */
+  margin-left: -80px;
 }
 
 .footer-left h2 {
